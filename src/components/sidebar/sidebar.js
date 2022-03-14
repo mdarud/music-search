@@ -6,7 +6,6 @@ import useWindowSize from "../../utils/utils";
 const Sidebar = () => {
   const { width } = useWindowSize();
   const isMobile = width <= 1080;
-  console.log(isMobile);
   return (
     <Menu
       disableCloseOnEsc={!isMobile}

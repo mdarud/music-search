@@ -70,7 +70,7 @@ class SearchFilter extends Component {
           fontFamily: "monospace",
         }}
       >
-        No search result:(
+        No search result :(
       </h1>
     );
     if (this.state.data) {
