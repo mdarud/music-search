@@ -35,3 +35,14 @@ test("search result matches", async () => {
   const linkElement = screen.getAllByText("love", { exact: false });
   expect(linkElement.length != 0);
 });
+
+test("search filter match result", async () => {
+  const utils = render(<Search />);
+  const sel = utils.getByDisplayValue("Track");
+  const input = utils.getByPlaceholderText("Search");
+  fireEvent.change(sel, { target: { value: "artist" } });
+  fireEvent.change(input, { target: { value: "Dom" } });
+  await waitFor(() => screen.getByRole("button"));
+  const linkElement = screen.getByText("Artist");
+  expect(linkElement).toBeInTheDocument();
+});
