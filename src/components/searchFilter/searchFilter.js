@@ -36,6 +36,10 @@ class SearchFilter extends Component {
     this.setState({ data, loading: false });
   };
 
+  componentDidMount() {
+    document.title = "Search | MusicBase";
+  }
+
   onChangeHandler = async (e) => {
     this.limit = 30;
     this.search(e.target.value);

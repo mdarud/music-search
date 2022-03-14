@@ -3,10 +3,6 @@ import ChartTrack from "../components/chartTrack/chartTrack";
 import ChartArtist from "../components/chartArtist/chartArtist";
 import "./chart.css";
 
-const selectStyle = {
-  marginLeft: "5px",
-};
-
 class ChartView extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +10,10 @@ class ChartView extends Component {
       value: "tracks",
     };
     this.onChange = this.onChange.bind(this);
+  }
+
+  componentDidMount() {
+    document.title = "Chart | MusicBase";
   }
 
   onChange(e) {
