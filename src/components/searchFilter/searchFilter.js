@@ -42,7 +42,7 @@ class SearchFilter extends Component {
 
   onChangeHandler = async (e) => {
     this.limit = 30;
-    this.search(e.target.value);
+    this.search(e.target.value, this.state.filter);
     this.setState({ value: e.target.value });
   };
 
