@@ -1,6 +1,4 @@
-# sirclo-music
-
-SIRCLO TECHNICAL TEST SOFTWARE ENGINEER FRONT END - Muhammad Daru Darmakusuma
+# music-search
 
 # Getting Started with Create React App
 
